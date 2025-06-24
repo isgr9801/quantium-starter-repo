@@ -1,8 +1,13 @@
 import pandas as pd
 import plotly.express as px
 from dash import Dash, dcc, html, Input, Output
+import os
 
 # Load the data
+base_path = os.path.dirname(__file__)
+file_path = os.path.join(base_path, 'Soul_Foods-Pink_Morsels-Consolidated.csv')
+
+
 df = pd.read_csv('Soul_Foods-Pink_Morsels-Consolidated.csv')
 
 # Preprocess
