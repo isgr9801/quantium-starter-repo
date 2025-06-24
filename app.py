@@ -10,6 +10,7 @@ df_agg = df.groupby('Date')['Sales'].sum().reset_index()  # Sum sales by date
 
 
 # line chart
+
 fig = px.line(df_agg, x='Date', y='Sales', title='Pink Morsels Sales Over Time')
 fig.update_layout(xaxis_title='Date', yaxis_title='Total Sales ($)')
 fig.add_vline(x=pd.to_datetime('2021-01-15').timestamp() * 1000, line_dash='dash', line_color='red',
